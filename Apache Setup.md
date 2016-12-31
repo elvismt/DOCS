@@ -60,3 +60,31 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ```
 
 Or adapt the path if your `wsgi.py` is not in the default location
+
+## Add new site domain (virtual host)
+
+Make a copy of the standard `/etc/apache2/sites-available/000-default.conf` say
+
+```bash
+/etc/apache2/sites-available/000-default.conf  cp /etc/apache2/sites-available/bytebrew.conf
+```
+
+and enter a content similar to
+
+```bash
+<VirtualHost *:80>
+    ServerAdmin elvismtt@gmail.com
+    ServerName bytebrew.com
+    ServerAlias www.bytebrew.com
+    DocumentRoot /var/www/bytebrew.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+To activate the new site make this configuration file known to apache2 and restart the server
+
+```bash
+sudo a2ensite bytebrew.conf
+sudo apache2ctl restart
+```
