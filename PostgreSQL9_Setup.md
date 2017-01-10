@@ -19,3 +19,11 @@ This line may be commented out, if so, uncomment it and replace it by
 ```bash
 listen_addresses = '*'
 ```
+
+## Create a new role and an associated batabse
+
+```SQL
+CREATE USER <UserName> WITH PASSWORD <ThePassword>;
+CREATE DATABASE <DatabaseName>;
+GRANT ALL PRIVILEGES ON DATABASE <DatabaseName> TO <UserName>;
+```
