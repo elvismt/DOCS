@@ -86,5 +86,33 @@ To activate the new site make this configuration file known to apache2 and resta
 
 ```bash
 sudo a2ensite bytebrew.conf
-sudo apache2ctl restart
+sudo service apache2 restart
+```
+
+## Final devtest.conf
+
+```apache
+<VirtualHost *:80>
+    ServerName  devtest.com
+    ServerAlias  www.devtest.com
+    ServerAdmin  your@mail.com
+
+    Alias  /static  /home/username/path/to/project/static
+    <Directory  /home/username/path/to/project/static>
+        Require all granted
+    </Directory>
+
+    <Directory  /home/username/path/to/project/projectname>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+    WSGIDaemonProcess  devtest  python-path=/home/username/path/to/project/projectname
+    WSGIProcessGroup devtest
+    WSGIScriptAlias  /  /home/username/path/to/project/projectname/wsgi.py
+
+    CustomLog /var/log/apache2/projectname-access.log combined
+    ErrorLog /var/log/apache2/projectname-error.log
+</VirtualHost>
 ```
