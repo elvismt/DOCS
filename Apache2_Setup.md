@@ -22,7 +22,7 @@ Take care to check is this is really the location of `mod_wsgi.so`.
 
 To add static files location add the following
 
-```bash
+```apache
 Alias /static/  /path/to/static-files/
 
 <Directory  /path/to/static-files/>
@@ -32,7 +32,7 @@ Alias /static/  /path/to/static-files/
 
 And finally to add the WSGI script add
 
-```bash
+```apache
 WSGIScriptAlias  /app-domain-name  /path/to/project-wsgi.py
 WSGIPythonPath  /path/to/project
 
@@ -71,7 +71,7 @@ Make a copy of the standard `/etc/apache2/sites-available/000-default.conf` say
 
 and enter a content similar to
 
-```bash
+```apache
 <VirtualHost *:80>
     ServerAdmin elvismtt@gmail.com
     ServerName bytebrew.com
