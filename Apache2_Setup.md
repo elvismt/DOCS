@@ -66,7 +66,7 @@ Or adapt the path if your `wsgi.py` is not in the default location
 Make a copy of the standard `/etc/apache2/sites-available/000-default.conf` say
 
 ```bash
-/etc/apache2/sites-available/000-default.conf  cp /etc/apache2/sites-available/bytebrew.conf
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/bytebrew.conf
 ```
 
 and enter a content similar to
