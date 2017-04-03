@@ -39,3 +39,8 @@ initrd /intel-ucode.img
 initrd /initramfs-linux.img
 options root=PARTUUID=XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX rootfstype=ext4 add_efi_memmap
 ```
+
+* Fonts include:
+https://fhackts.wordpress.com/2016/09/09/installing-archlinux-the-efisystemd-boot-way/
+https://wiki.archlinux.org/index.php/microcode#Installation
+http://www.rodsbooks.com/efi-bootloaders/principles.html
