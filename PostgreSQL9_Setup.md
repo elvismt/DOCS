@@ -1,30 +1,13 @@
 # Setup PostgreSQL in Debian 9
 
-## Packages installation
+## Install Packages
 
 ```bash
 sudo apt-get install postgresql
 ```
 
-## Make the server accept connections from remote hosts
-
-Edit `/etc/postgresql/9.4/main/postgresql.conf` and search for the line
-
-```bash
-listen_addresses = 'localhost'
-```
-
-This line may be commented out, if so, uncomment it. The default value is `'localhost'`
-this means that the postgres server will accept connections only from the local host.
-It depends on your application, it will probably run in a separate machine, so add the
-IPs of the machines that you want to enable access to the database, if you want to accept
-connections from all addresses use:
-
-```bash
-listen_addresses = '*'
-```
-
-Additionally, if you to enable connections from a network different from that of the database
+## Make the server accept connections from your favorite networks
+To enable connections from a particular network
 add a line to the file `/etc/postgresql/9.4/main/pg_hba.conf` that reads similar to
 
 ```bash
