@@ -19,7 +19,8 @@ substituting `192.168.0.1/24` by the network you wish to give access.
 ## [OPTIONAL] Create a new role and an associated batabse
 
 ```SQL
-CREATE USER <UserName> WITH PASSWORD '<ThePassword>';
+CREATE ROLE <UserName> WITH PASSWORD '<ThePassword>';
+ALTER ROLE <UserName> WITH LOGIN;
 CREATE DATABASE <DatabaseName>;
 GRANT ALL PRIVILEGES ON DATABASE <DatabaseName> TO <UserName>;
 ```
