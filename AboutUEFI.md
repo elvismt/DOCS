@@ -1,4 +1,4 @@
-## What really is UEFI
+# UEFI boot: how does that actually work, then?
 
 # My own important note
 
