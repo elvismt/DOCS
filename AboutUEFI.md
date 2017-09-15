@@ -3,7 +3,7 @@
 # My own important note
 
 The author of this text is adamw from https://www.happyassassin.net/.
-I am copying it here to make sure that such a great material about UEFI firmware will not vanich from the web.
+I am copying it here to make sure that such a great material about UEFI firmware will not vanish from the web.
 
 # Let's get to it
 
