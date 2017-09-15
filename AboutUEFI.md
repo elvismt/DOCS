@@ -2,7 +2,7 @@
 
 # My own important note
 
-The author of this text is Adam Williamson who published it [https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then](here)
+The author of this text is Adam Williamson who published it [here](https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then)
 I am copying it here to make sure that such a great material about UEFI firmware will not vanish from the web.
 
 # Let's get to it
